@@ -1,16 +1,19 @@
-# tap_timer_challenge
+# TapTimer-Challenge
 
-A new Flutter project.
+This repository contains the TapTimer-Challenge project, a Flutter application that involves a timer and tap counter. The app allows users to start a timer and tap on the screen, and it records the number of taps within the specified time.
 
-## Getting Started
+## Developer Details
+- **Developer Name**: Habeeb
+- **GitHub Username**: habeeb321
+- **GitHub Profile**: [habeeb321 GitHub Profile](https://github.com/habeeb321)
 
-This project is a starting point for a Flutter application.
+## Project Details
+- **GitHub Repository**: [TapTimer-Challenge Repository](https://github.com/habeeb321/TapTimer-Challenge)
 
-A few resources to get you started if this is your first Flutter project:
+## About the Developer
+Habeeb is an experienced Flutter developer with a passion for creating innovative and user-friendly mobile applications. He is dedicated to delivering high-quality software solutions and actively contributes to the Flutter community.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## More Details
+The TapTimer-Challenge project is a simple yet engaging Flutter application that challenges users to tap as many times as possible within a specified time. The app features a timer that counts down from a specified time and a tap counter that records the number of taps. The app is designed to be easy to use and provides a fun and engaging way to test your tapping skills.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For more details about the project and the developer, please visit the [TapTimer-Challenge Repository](https://github.com/habeeb321/TapTimer-Challenge).
