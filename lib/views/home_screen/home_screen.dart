@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tap_timer_challenge/views/home_screen/widgets/circular_timer_widget.dart';
 import 'package:tap_timer_challenge/views/home_screen/widgets/random_and_seconds_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,9 +22,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             const RandomAndSecondsWidget(),
             const SuccessOrFailureWidget(isSuccess: false),
-            const CircleAvatar(
-              radius: 50,
-            ),
+            const CircularTimerWidget(),
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
