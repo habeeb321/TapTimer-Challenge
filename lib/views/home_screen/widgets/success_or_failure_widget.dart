@@ -18,7 +18,7 @@ class SuccessOrFailureWidget extends GetView<TimerController> {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: const Color(0xffFFBC25),
+                color: const Color(0xff0285FC),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
