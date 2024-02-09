@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             RandomAndSecondsWidget(),
-            SuccessOrFailureWidget(isSuccess: false),
+            SuccessOrFailureWidget(),
             CircularTimerWidget(),
             ClickButtonWidget(),
           ],

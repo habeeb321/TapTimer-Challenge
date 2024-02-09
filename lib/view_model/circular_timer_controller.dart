@@ -4,10 +4,13 @@ import 'dart:math';
 import 'package:get/get.dart';
 
 class TimerController extends GetxController {
+  RxInt attempts = 0.obs;
+  RxInt correctAttempts = 0.obs;
   RxInt seconds = 0.obs;
   RxInt randomNumber = 0.obs;
   RxString formattedSeconds = ''.obs;
   RxString displayText = ''.obs;
+  final isSuccess = false.obs;
 
   @override
   void onInit() {
@@ -24,5 +27,15 @@ class TimerController extends GetxController {
 
   getRandomNumber() {
     randomNumber.value = Random().nextInt(60);
+  }
+
+  checkTiming() {
+    attempts.value++;
+    if (seconds.value == randomNumber.value) {
+      correctAttempts.value++;
+      isSuccess.value = true;
+    } else {
+      isSuccess.value = false;
+    }
   }
 }

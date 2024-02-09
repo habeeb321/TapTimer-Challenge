@@ -16,6 +16,7 @@ class ClickButtonWidget extends GetView<TimerController> {
       child: ElevatedButton(
         onPressed: () {
           controller.getRandomNumber();
+          controller.checkTiming();
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
