@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tap_timer_challenge/views/home_screen/widgets/widgets.dart';
+import 'package:tap_timer_challenge/views/home_screen/widgets/random_and_seconds_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
