@@ -1,11 +1,13 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:get/get.dart';
 
-class CircularTimerController extends GetxController {
-  var seconds = 0.obs;
-  var formattedSeconds = ''.obs;
-  var displayText = ''.obs;
+class TimerController extends GetxController {
+  RxInt seconds = 0.obs;
+  RxInt randomNumber = 0.obs;
+  RxString formattedSeconds = ''.obs;
+  RxString displayText = ''.obs;
 
   @override
   void onInit() {
@@ -18,5 +20,9 @@ class CircularTimerController extends GetxController {
     Timer.periodic(const Duration(seconds: 1), (timer) {
       seconds.value = DateTime.now().second;
     });
+  }
+
+  getRandomNumber() {
+    randomNumber.value = Random().nextInt(60);
   }
 }

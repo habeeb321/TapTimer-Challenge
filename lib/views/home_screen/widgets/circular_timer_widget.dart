@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tap_timer_challenge/view_model/circular_timer_controller.dart';
 
-class CircularTimerWidget extends GetView<CircularTimerController> {
+class CircularTimerWidget extends GetView<TimerController> {
   const CircularTimerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(CircularTimerController());
+    Get.put(TimerController());
     return Obx(
       () => Stack(
         alignment: Alignment.center,
