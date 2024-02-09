@@ -15,6 +15,8 @@ class ClickButtonWidget extends GetView<TimerController> {
       width: 100,
       child: ElevatedButton(
         onPressed: () {
+          controller.buttonClicked.value = true;
+          controller.timeoutAttempts.value++;
           controller.getRandomNumber();
           controller.checkTiming();
         },

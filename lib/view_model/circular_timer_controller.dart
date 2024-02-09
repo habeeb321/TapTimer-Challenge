@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:get/get.dart';
 
 class TimerController extends GetxController {
+  RxInt timeoutAttempts = 0.obs;
   RxInt attempts = 0.obs;
   RxInt correctAttempts = 0.obs;
   RxInt seconds = 0.obs;
@@ -11,18 +13,20 @@ class TimerController extends GetxController {
   RxString formattedSeconds = ''.obs;
   RxString displayText = ''.obs;
   final isSuccess = false.obs;
+  final buttonClicked = false.obs;
+  CountDownController? animeController;
 
   @override
   void onInit() {
     super.onInit();
     ever(seconds, (_) {
       formattedSeconds.value = (seconds.value % 60).toString().padLeft(2, '0');
-      displayText.value = '0:${formattedSeconds.value}';
     });
 
     Timer.periodic(const Duration(seconds: 1), (timer) {
       seconds.value = DateTime.now().second;
     });
+    animeController = CountDownController();
   }
 
   getRandomNumber() {

@@ -1,3 +1,4 @@
+import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tap_timer_challenge/view_model/circular_timer_controller.dart';
@@ -12,15 +13,23 @@ class CircularTimerWidget extends GetView<TimerController> {
       () => Stack(
         alignment: Alignment.center,
         children: [
-          SizedBox(
-            height: 100,
-            width: 100,
-            child: CircularProgressIndicator(
-              backgroundColor: const Color(0xff818181),
-              value: (controller.seconds.value / 60),
-              valueColor:
-                  const AlwaysStoppedAnimation<Color>(Color(0xFF41B984)),
-              strokeWidth: 8,
+          Center(
+            child: CircularCountDownTimer(
+              duration: 5,
+              controller: controller.animeController,
+              width: 150,
+              height: 150,
+              fillColor: const Color(0xff818181),
+              strokeWidth: 8.0,
+              textStyle: const TextStyle(fontSize: 40.0, color: Colors.black),
+              isReverse: true,
+              isReverseAnimation: false,
+              ringColor: Colors.green,
+              onComplete: () {
+                controller.buttonClicked.value = false;
+                controller.timeoutAttempts.value++;
+                controller.animeController?.restart(duration: 5);
+              },
             ),
           ),
           Text(
